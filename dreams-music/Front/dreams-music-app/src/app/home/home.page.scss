@@ -1,0 +1,139 @@
+.dreams_music {
+    border-radius: 30px;
+    font-size: large;
+    font-family: 'Cabin', sans-serif;
+    background: linear-gradient(to right, #FDC70C, #FDC70C 30%, #ee832b, #e65d27 55%);
+    width: 70%;
+    height: 2.5em;
+    display: inline-grid;
+    align-items: center;
+    text-align: center;
+    color: #F5F5F5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+       
+}
+
+.imagem_canto{
+    text-align: right;
+    width: 5em;
+}
+
+.perfil{
+    --box-shadow: 0;
+}
+
+.foto_topo{
+    max-width: 93%;
+}
+
+.foto{
+    max-width: 93%;
+}
+
+.foto_comentario{
+    max-width: 80%;
+}
+
+.bloco-verao {
+    background-color:rgba(253, 199, 12, 1);
+    width:50%;
+    height: auto;
+}
+
+.header_post {
+    width: 100%;
+    display:inline-flex;
+    justify-content: flex-start;
+}
+
+.header_post_col {
+    //display:inline-flex;
+    //padding-inline-start:0;
+    //padding-inline-end: 0;
+    width: 75%;
+    width: 100%;
+    display:inline-flex;
+    justify-content: flex-start;
+
+}
+
+.cor_descricao {
+    color: #838181;
+    font-size: small;
+}
+
+.margem_div {
+    margin-bottom: 1%;
+}
+
+.inline{
+    display:inline-block;
+}
+
+
+ion-icon {
+    color:#f6e017;
+}
+
+.barra{
+    display: flex;
+    height: 4em;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+ion-title{
+    text-align: center;
+}
+
+ion-grid{
+    height: 80%;
+    padding-block-start: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.comentario{
+    padding-inline-start:0;
+}
+
+.texto{
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.midia{
+    height: 40vh;
+    width: 95vw;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+}
+
+.icone{
+    width: 0.7em;
+}
+
+.btn_icone{
+    width: 2em;
+    height: 2em;
+    --padding-start: 0;
+    --padding-end: 0;
+}
+
+.comentarios{
+    color: #38A5E3;
+    font-size: medium;
+    font-family: 'Cabin', sans-serif;
+}
+
+.nome_comentario{
+    font-size: medium;
+}
+
+.descricao_comentario{
+    font-size: small;
+}

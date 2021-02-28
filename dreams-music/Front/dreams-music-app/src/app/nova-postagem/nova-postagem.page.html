@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/home" color="success" slot="start">
+          <ion-icon size="large" name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title><span class="dreams_music">Nova Postagem</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button (click)="alerta()" color="danger" shape="round">Publicar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="grid_fundo">
+    <form [formGroup]="publishForm" (ngSubmit)="publish(publishForm)">
+    <ion-row>
+      <ion-col class="margem_musica">
+        <ion-input type='text' placeholder="Nome da música" formControlName="musicname"> </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="margem_musica">
+        <ion-input type='text' placeholder="Gênero" formControlName="genre"> </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="margem_descricao">
+        <ion-input type='text' placeholder="Descrição" formControlName="text"> </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="margem_post">
+        <ion-input type='text' placeholder="Link da música" formControlName="url"> </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row class="posicao_icones">
+      <ion-col>
+        <ion-button color="medium">
+          <ion-icon name="camera-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium">
+          <ion-icon name="image-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="medium">
+          <ion-icon name="link-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-grid>
+
+</ion-content>

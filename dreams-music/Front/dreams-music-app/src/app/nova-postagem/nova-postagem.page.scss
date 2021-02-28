@@ -1,0 +1,61 @@
+ion-icon {
+    color: #E93E3A;
+}
+
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+
+ion-col {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.posicao_icones {
+    width: 70%;
+    display:inline-flex;
+    justify-content: flex-start;
+}
+
+.margem_post {
+    margin-bottom: 5%;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+}
+
+.grid_fundo {
+    background: rgba(237, 104, 60, 31%);
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.margem_descricao {
+    margin-bottom: 5%;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+}
+.margem_musica {
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+}
+
+.dreams_music {
+    border-radius: 30px;
+    font-size: large;
+    font-family: 'Cabin', sans-serif;
+    background: linear-gradient(to right, #FDC70C, #FDC70C 30%, #ee832b, #e65d27 55%);
+    width: 70%;
+    height: 2.5em;
+    display: inline-grid;
+    align-items: center;
+    text-align: center;
+    color: #F5F5F5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);      
+}

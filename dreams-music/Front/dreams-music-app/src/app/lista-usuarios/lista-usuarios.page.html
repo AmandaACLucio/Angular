@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button href="http://localhost:8100/home" color="success" slot="start">
+      <ion-icon size="large" name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title><span class="dreams_music">Listar Usuários</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor='let user of users'>
+      <ion-col id="header_post_col" size="1.5">
+        <div class="inline" *ngIf="user.id!=userLogadoId"><img class="foto_comentario" src="../assets/images/usuario-de-perfil.svg" /></div>
+      </ion-col>
+      <ion-col>
+        <div class="nome_comentario" *ngIf="user.id!=userLogadoId" routerLink="/perfil" (click)="getId(user.id)">{{user.name}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

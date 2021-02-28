@@ -1,0 +1,38 @@
+<ion-header> 
+  <ion-toolbar>
+    <ion-button href="http://localhost:8100/perfil" color="success" slot="start">
+      <ion-icon size="large" name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Edite seu post!</ion-title>
+    <ion-button color="success" slot="end" type='submit' (click)="editPost(editPostForm)">
+      <ion-icon size="large" name="checkmark"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <form [formGroup]="editPostForm" (ngSubmit)="editPost(editPostForm)">
+    <ion-row>
+    <ion-col>
+      <div class="margem_div" *ngIf="user"> {{user.name}} </div>
+     <div class="cor_descricao">
+       <ion-input type='text' placeholder="Nome da Música" formControlName="musicname"> </ion-input>
+       <ion-input type='text' placeholder="Gênero" formControlName="genre"> </ion-input></div>
+    </ion-col>
+   <ion-col>
+    </ion-col>
+  </ion-row>
+  <ion-row> 
+    <div class="post">
+      <div class="texto">
+        <ion-input type='text' placeholder="Descrição" formControlName="text"> </ion-input>
+      </div>
+      <div class="midia">
+        <ion-input type='text' placeholder="Link da música" formControlName="url"> </ion-input>
+      </div>
+    </div>
+  </ion-row>
+</form>
+</ion-grid>
+</ion-content>

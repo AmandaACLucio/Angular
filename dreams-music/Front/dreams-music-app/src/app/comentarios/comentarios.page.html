@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div class="barra">
+      <ion-title><span class="dreams_music">Dreams Music</span></ion-title>
+      <div class="imagem_canto">
+        <ion-button class="perfil" href="http://localhost:8100/perfil" color="success" slot="end">
+            <img class="foto" src="../assets/images/usuario-de-perfil.svg" />
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fonte">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button href="http://localhost:8100/nova-postagem">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-grid class="postagem_completa" *ngFor='let post of posts'>
+    <ion-row class="header_post">
+      <ion-col id="header_post_col" size="2">
+        <div class="inline"><img class="foto" src="../assets/images/usuario-de-perfil.svg" /></div>
+      </ion-col>
+      <ion-col>
+        <div class="margem_div"> {{post.nameUser}} </div>
+        <div class="cor_descricao">{{post.musicname}} | {{post.genre}} </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="post">
+        <div class="texto">{{post.text}}</div>
+        <div class="midia">{{post.url}}</div>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" class="comentario">
+        <div> <ion-button class="btn_icone" color="primary">
+          <ion-icon class="icone" name="chatbox-ellipses"></ion-icon>
+        </ion-button> </div>
+      </ion-col>
+      <ion-col size="8">
+        <div> <ion-button  class="btn_icone" color="primary">
+          <ion-icon class="icone" slot="icon-only" name="star"></ion-icon>
+        </ion-button> </div>
+      </ion-col>
+      <ion-col size="2">
+        <div> <ion-button  class="btn_icone" color="primary">
+          <ion-icon class="icone" name="bookmark"></ion-icon>
+        </ion-button> </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <a href="http://localhost:8100/comentarios"> Mostrar Todos os comentários </a>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div><a class="comentarios" href="url">Mostrar todos os comentários</a></div>
+      </ion-col>
+    </ion-row>
+<!--     <ion-row *ngFor='let comment of comments'>
+      <app-comment [commentsPost]='comment'></app-comment>
+      <ion-col id="header_post_col" size="1.5">
+        <div class="inline" *ngIf="comment.post_id==post.id"><img class="foto_comentario" src="../assets/images/usuario-de-perfil.svg" /></div>
+      </ion-col>
+      <ion-col>
+        <div class="nome_comentario"> {{comment.nameUser}} </div>
+        <div class="descricao_comentario"> {{comment.text}} </div>
+      </ion-col>
+    </ion-row>    --> 
+  </ion-grid>
+</ion-content>

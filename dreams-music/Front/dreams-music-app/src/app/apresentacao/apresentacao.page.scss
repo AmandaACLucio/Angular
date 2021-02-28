@@ -1,0 +1,34 @@
+ion-col {
+    text-align: center;
+    align-items: center;
+}
+
+ion-content {
+    --background: linear-gradient(to bottom right, #e93c5a 30%, #f6a117);
+}
+
+.texto_inicial {
+    color: ghostwhite;
+    margin-bottom: 15%;
+    margin-top: 5%;
+    font-size: large;
+    width: 50vw;
+    text-align: center;
+    align-items: center;
+}
+
+img{
+    width: 80vw;
+    height: auto;
+}
+
+
+ion-button.btn_apresentacao{
+    text-transform:initial;
+    width: 60vw;
+    --border-radius:20px;
+}
+
+.margem{
+    margin-top: 2em;
+}

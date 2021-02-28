@@ -1,0 +1,74 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.logo{
+    width: 35%;
+    height: auto;
+    margin-left: 1%;
+}
+
+ion-content{
+    position: relative;
+    margin:0;
+    padding: 0;
+    width: 100%;
+    overflow-y: scroll;
+    --ion-background-color: #FBFBFB;
+}
+
+ion-toolbar{
+    --ion-background-color: #FBFBFB;
+}
+
+ion-searchbar{
+    --ion-background-color: #F1F0F0;
+}
+
+.searchbar-input-container.sc-ion-searchbar-md{
+    --border-radius: 54em;
+    --box-shadow: initial;
+}
+
+.menu-opcao{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom-color: #E3E3E3;
+}
+
+.menu-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.8em;
+    font-family: Cabin;
+    font-size: 120%;
+}

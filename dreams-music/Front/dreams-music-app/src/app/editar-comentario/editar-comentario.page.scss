@@ -1,0 +1,104 @@
+
+.perfil_centro{
+    text-align: center;
+    margin-top: 3%;
+}
+
+ion-icon {
+    color: #E93E3A;
+}
+
+.seguir{
+    text-align: center;
+    font-size: large;
+}
+
+.tamaho_perfil{
+    width: 40vw;
+    height: 40vh;
+}
+
+.margem_row {
+    margin-bottom: 10%;
+}
+
+.dreams_music {
+    border-radius: 30px;
+    font-size: large;
+    font-family: 'Cabin', sans-serif;
+    background: linear-gradient(to right, #FDC70C, #FDC70C 30%, #ee832b, #e65d27 55%);
+    width: 70%;
+    height: 2.5em;
+    display: inline-grid;
+    align-items: center;
+    text-align: center;
+    color: #F5F5F5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);      
+}
+
+.header_post {
+    width: 100%;
+    display:inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.texto{
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.midia{
+    height: 40vh;
+    width: 97vw;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+}
+
+.icone{
+    width: 0.7em;
+    color:#f6e017;
+
+}
+
+.btn_icone{
+    width: 2em;
+    height: 2em;
+    --padding-start: 0;
+    --padding-end: 0;
+}
+
+.comentario{
+    padding-inline-start:0;
+}
+
+
+.comentarios{
+    color: #38A5E3;
+    font-size: small;
+    font-family: 'Cabin', sans-serif;
+}
+
+.postagem_completa{
+    height: 78%;
+    padding-block-start: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.foto{
+    max-width: 91%;
+}
+
+.cor_descricao {
+    color: #000000;
+    font-size: medium;
+}
+
+.margem_div {
+    margin-bottom: 1%;
+}

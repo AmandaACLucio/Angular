@@ -1,0 +1,49 @@
+.login{
+    width: 100%;
+    height: 100%;
+    margin-left: 1%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_login{
+    width: 35%;
+    height: auto;
+    margin-bottom: 4%;
+}
+
+.item{
+    background-color: #F1F0F0;
+    width: 70%;
+    margin-top: 4%;
+}
+
+ion-button{
+    margin-top: 6%;
+    width: 70%;
+}
+
+h2{
+    font-family: Cabin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4A1D5F;
+}
+
+h3{
+    font-family: Cabin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #07000a;
+    margin-top: 6%;
+}

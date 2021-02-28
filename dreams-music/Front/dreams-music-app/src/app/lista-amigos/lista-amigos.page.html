@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button href="http://localhost:8100/home" color="success" slot="start">
+      <ion-icon size="large" name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title><span class="dreams_music">Seus Amigos</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor='let friend of friends'>
+      <ion-col id="header_post_col" size="1.5">
+        <div class="inline" ><img class="foto_comentario" src="../assets/images/usuario-de-perfil.svg" /></div>
+      </ion-col>
+      <ion-col *ngFor='let user of users'>
+        <div class="nome_comentario" *ngIf='user.id==friend.friend_id'>{{user.name}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-button href="http://localhost:8100/home" color="success" slot="start">
+        <ion-icon size="large" name="arrow-back"></ion-icon>
+      </ion-button>
+    <ion-title><span class="dreams_music">EditarPerfil</span></ion-title>
+    <ion-button color="success" slot="end" type='submit' (click)="editProfile()">
+      <ion-icon size="large" name="checkmark"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="perfil_centro">
+    <ion-button color="success" slot="end">
+      <img src="../assets/images/usuario-de-perfil.svg" />
+      <div>
+        <ion-button (click)="alertaDeletar()" color="success" slot="start">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-button>
+  </div>
+  <form id="editProfileId" [formGroup]="editProfileForm" (ngSubmit)="editProfile(editProfileForm)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="Inserir Nome novo" formControlName="name" > </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="Inserir E-mail" formControlName="email"> </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row class="margem_row">
+        <ion-col>
+          <ion-input placeholder="Inserir Telefone" formControlName="phone"> </ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <ion-grid>
+    <ion-row class="header_post">
+      <ion-col id="header_post_col" size="2">
+        <div class="inline"><img src="../assets/images/usuario-de-perfil.svg" /></div>
+      </ion-col>
+      <ion-col>
+        <div class="margem_div"> Nome </div>
+        <div class="cor_descricao"> nome da música / genero </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div>link da música</div>
+    </ion-row>
+      <ion-row>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>

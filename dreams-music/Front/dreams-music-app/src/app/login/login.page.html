@@ -1,0 +1,49 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="fonte">
+  <div class="container">
+    <div class="box">
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class=backgroundTitulo><span class="dreams_music"><div>Dreams</div><div>Music</div></span></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="login"><span>Faça seu Login</span></div>
+            </ion-col>
+          </ion-row>
+          <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+            <ion-row>
+              <ion-col id="alinhamento">
+                <div><ion-input type='email' placeholder="Endereço de email" formControlName="email"> </ion-input></div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col id="alinhamento">
+                <div><ion-input type='text' placeholder="Senha" formControlName="password"> </ion-input></div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div><ion-button  class="btn_entrar" color="tertiary" shape="round" type='submit' [disabled]="loginForm.invalid">Entrar</ion-button></div>
+              </ion-col>
+            </ion-row>
+          <ion-row>
+            <ion-col>
+              <div id="colorWhite">ou</div>
+            </ion-col>
+          </ion-row>
+        </form>
+        <ion-row>
+          <ion-col>
+            <div><a routerLink="/home">Entrar como visitante</a> | <a routerLink="/cadastro"> Cadastre-se</a></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+</ion-content>

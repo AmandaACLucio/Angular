@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+    <img class="logo" src=".\assets\logo-roxo.png" alt="Liber">
+    <ion-icon name="cart-outline" slot="end"></ion-icon>
+    <ion-avatar class="perfil" slot="end">
+      <img src=".\assets\Logan-Browning-Contact-Information.jpg" alt="Perfil">
+    </ion-avatar>
+ 
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar showCancelButton="focus" placeholder="O que você procura?"></ion-searchbar>
+  </ion-toolbar>
+
+  <ul class="menu-opcao">
+    <li class="menu-list" (click)="livrosPopover()">Livros</li>
+    <li class="menu-list" (click)="categoriaPopover()">Categoria</li>
+    <li class="menu-list" (click)="precoPopover()">Preço</li>
+    <li class="menu-list" (click)="avaliacaoPopover()">Avaliação</li>
+  </ul>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <section id="mais-vendidos">
+    <h2>Mais vendidos</h2>
+    <div class="sessoes-livros">
+      <ul class="livros-list">
+        <li class="livros" *ngFor="let livro of livros.slice(0, 4);"><img class=livro src={{livro.capa}}></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sugestoes">
+    <h2>Sugestões para você</h2>
+    <div class="sessoes-livros">
+      <ul class="livros-list">
+        <li class="livros" *ngFor="let livro of livros.slice(4, 8);"><img class=livro src={{livro.capa}}></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="lancamentos">
+    <h2>Futuros lançamentos</h2>
+    <div class="sessoes-livros">
+      <ul class="livros-list">
+        <li class="livros" *ngFor="let livro of livros.slice(8, 12);"><img class=livro src={{livro.capa}}></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="digitais" class="sessoes-livros">
+    <h2>Livros Digitais</h2>
+    <div class="sessoes-livros">
+      <ul class="livros-list">
+        <li class="livros" *ngFor="let livro of livros.slice(12, 16);"><img class=livro src={{livro.capa}}></li>
+      </ul>
+    </div>
+  </section>
+</ion-content>

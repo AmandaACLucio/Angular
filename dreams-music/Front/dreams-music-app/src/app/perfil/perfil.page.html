@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button href="http://localhost:8100/home" color="success" slot="start">
+      <ion-icon size="large" name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title><span class="dreams_music">Perfil</span></ion-title>
+    <ion-button size="large" color="success" slot="end">
+      <ion-icon name="log-out-outline"></ion-icon>
+  </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="perfil_centro">
+    <ion-button color="success" slot="end">
+      <img src="../assets/images/usuario-de-perfil.svg" />
+    </ion-button>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      </ion-col>
+      <ion-col *ngIf="userLogado">
+        <div class="seguir" *ngIf="user_id==userLogado.id">
+          <ion-button routerLink="/editar-perfil" (click)="getId(userLogado.id)" fill="outline" size="small">editar</ion-button>
+        </div>
+      </ion-col>
+      <ion-col *ngIf="userLogado">
+        <div class="seguir" *ngIf="user_id!=userLogado.id">
+          <ion-button (click)="createFriend()" fill="outline" size="small">{{textBtnFriendship}}</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="user">
+        Nome: {{user.name}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="user">
+        E-mail: {{user.email}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="margem_row">
+      <ion-col *ngIf="user">
+        Telefone: {{user.phone}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="postagem_completa" *ngFor='let post of posts'>
+    <ion-row class="header_post">
+      <ion-col id="header_post_col" size="2">
+        <div class="inline"><img class="foto" src="../assets/images/usuario-de-perfil.svg" /></div>
+      </ion-col>
+      <ion-col>
+        <div class="margem_div" *ngIf="user"> {{user.name}} </div>
+        <div class="cor_descricao">{{post.musicname}} | {{post.genre}}</div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button color="success" slot="start" routerLink="/perfil" (click)="deletePost(post.id)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+          <ion-button color="success" slot="start" (click)="gotoFunction(post.id)">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="post">
+        <div class="texto">{{post.text}}</div>
+        <div class="midia" routerLink="/ver-post" (click)="postNavigate(post.id)">{{post.url}}</div>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" class="comentario">
+        <div> <ion-button class="btn_icone" color="primary">
+          <ion-icon class="icone" name="chatbox-ellipses"></ion-icon>
+        </ion-button> </div>
+      </ion-col>
+      <ion-col size="8">
+        <div> <ion-button  class="btn_icone" color="primary">
+          <ion-icon class="icone" slot="icon-only" name="star"></ion-icon>
+        </ion-button> </div>
+      </ion-col>
+      <ion-col size="2">
+        <div> <ion-button  class="btn_icone" color="primary">
+          <ion-icon class="icone" name="bookmark"></ion-icon>
+        </ion-button> </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div><a class="comentarios" routerLink="/ver-post" (click)="postNavigate(post.id)">Mostrar todos os comentários</a></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

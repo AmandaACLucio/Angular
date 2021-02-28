@@ -1,0 +1,58 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="fonte">
+  <div class="container">
+    <div class="box">
+    <ion-grid>
+        <ion-row>
+          <ion-col class="alinhar">
+            <div class=cadastre><span>Cadastre-se</span></div>
+          </ion-col>
+        </ion-row>
+        <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)">
+          <ion-row>
+            <ion-col>
+              <div>
+                <ion-input type='text' placeholder="Nome Completo" formControlName="name"> </ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div>
+                <ion-input type='text' placeholder="Nome de Usuário" formControlName="username"> </ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div>
+                <ion-input type='email' placeholder="Endereço de email" formControlName="email"> </ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div>
+                <ion-input type='text' placeholder="Senha"  formControlName="password" > </ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div>
+                <ion-input type='text' placeholder="Confirmar Senha" formControlName="confirm_password"> </ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="alinhar">
+              <div><ion-button class="btn_cadastre" color="tertiary" shape="round" type='submit' [disabled]="registerForm.invalid">Cadastre-se</ion-button></div>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-grid>
+    </div>
+    </div>
+</ion-content>
